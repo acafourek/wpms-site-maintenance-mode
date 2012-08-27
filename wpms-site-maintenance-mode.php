@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: WPMS Site Maintenance Mode
-Plugin URI: http://www.joshparker.us/blog/wordpress/wpms_site_maintenance_mode_plugin.html
+Plugin URI: http://wordpress.org/extend/plugins/wpms-site-maintenance-mode/
 Description: Provides an interface to make a WPMS network unavailable to everyone during maintenance, except the admin.
 Original Author: I.T. Damager
-Author: Joshua Parker Consulting
-Author URI: http://www.joshparker.us/
-Version: 1.0
+Author: 7 Media Web Solutions, LLC
+Author URI: http://www.7mediaws.org/
+Version: 1.0.1
 License: GPL
 
 This program is free software; you can redistribute it and/or modify
@@ -56,13 +56,13 @@ class wpms_sitemaint {
 		<head>
 			<title>' . get_site_option('site_name') . ' is undergoing routine maintenance</title>
 			<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '; ' . get_bloginfo('charset') . '" />
-			<link rel="stylesheet" href="' . WP_PLUGIN_URL . '/wpms-site-maintenance/css/style.css" type="text/css" media="screen" />
+			<link rel="stylesheet" href="' . WP_PLUGIN_URL . '/wpms-site-maintenance-mode/css/style.css" type="text/css" media="screen" />
 		</head>
 		<body>
  
 			<div id="content-outer">
 				<div id="content">
-					<img src="' . WP_PLUGIN_URL . '/wpms-site-maintenance/images/coffee_machine-256.png" class="motivation-maker" />	
+					<img src="' . WP_PLUGIN_URL . '/wpms-site-maintenance-mode/images/coffee_machine-256.png" class="motivation-maker" />	
 					<h1>We are on a quick coffee break.</h1>
 					<p>Our ' . get_site_option('site_name') . ' network is undergoing maintenance that will last <strong>' . $this->retryafter . ' minutes at the most</strong>.</p>
 					<p>We apologize for the inconvenience, and we are doing out best to get things back to working order.</p>
@@ -183,5 +183,3 @@ if ($this->sitemaint == 3) { ?>
 
 //begin execution
 if (defined('ABSPATH')) $wpms_sitemaint = new wpms_sitemaint();
-
-?>

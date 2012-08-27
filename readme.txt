@@ -1,10 +1,10 @@
 === WPMS Site Maintenance Mode ===
 Contributors: parkerj
-Author: Joshua Parker Consulting
+Author: 7 Media Web Solutions, LLC
 Tags: wpmu, wpms, maintenance, shutdown, multisite, unavailable, offline, coming soon, construction
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 1.0
+Tested up to: 3.4.1
+Stable tag: 1.0.1
 
 Provides an interface to make a WPMS network unavailable to everyone during maintenance, except the admin.
 
@@ -19,6 +19,9 @@ Plugin allows a super admin to put his/her entire network, main site, or subsite
 3. Visit Site Admin > Tools > WPMS Sitedown and choose the site operational option and edit the maintenace message to your liking.
 
 == Changelog ==
+
+= 1.0.1 (2012-08-27) =
+* Fixed WP_PLUGIN_URL
 
 = 1.0 (2011-10-31) =
 * Initial Release
