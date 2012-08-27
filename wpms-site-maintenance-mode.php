@@ -6,7 +6,7 @@ Description: Provides an interface to make a WPMS network unavailable to everyon
 Original Author: I.T. Damager
 Author: 7 Media Web Solutions, LLC
 Author URI: http://www.7mediaws.org/
-Version: 1.0.1
+Version: 1.0.2
 License: GPL
 
 This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@ class wpms_sitemaint {
 
 	function wpms_sitemaint() {
 		add_action('init',array(&$this,'wpms_sitemaint_init'),1);
-		add_action('admin_menu',array(&$this,'add_admin_subpanel'));
+		add_action('network_admin_menu',array(&$this,'add_admin_subpanel'));
 	}
 
 	function wpms_sitemaint_init() {
@@ -41,9 +41,7 @@ class wpms_sitemaint {
 	}
 
 	function add_admin_subpanel() {
-		get_currentuserinfo();
-		if (!is_super_admin()) return false;
-		add_submenu_page('ms-admin.php', 'WPMS Site Shutdown', 'WPMS Sitedown', 'manage_network_options', 'wpms_site_maint', array(&$this,'adminpage'));
+		add_submenu_page('settings.php', __('WPMS Site Shutdown'), __('WPMS Sitedown'), 'manage_network_options', 'wpms_site_maint', array(&$this,'adminpage'));
 	}
 
 	function set_defaults() {
