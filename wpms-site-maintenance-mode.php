@@ -6,7 +6,7 @@ Description: Provides an interface to make a WPMS network unavailable to everyon
 Original Author: I.T. Damager
 Author: 7 Media Web Solutions, LLC
 Author URI: http://www.7mediaws.org/
-Version: 1.0.2
+Version: 1.0.3
 License: GPL
 
 This program is free software; you can redistribute it and/or modify
